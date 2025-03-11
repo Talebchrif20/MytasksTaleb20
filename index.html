@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="app-header">
+    <h1>Hello Taleb</h1>
+  </header>
+
+  <!-- Main Content -->
+  <div class="app-container">
+    <!-- Left Column: Task Sections -->
+    <div class="left-column">
+      <!-- Add Task Section -->
+      <div class="add-task-section">
+        <h2>Add Task</h2>
+        <div class="input-container">
+          <input type="text" id="taskInput" placeholder="Enter a new task..." />
+          <input type="date" id="endDateInput" />
+          <select id="priorityInput">
+            <option value="low">Low Priority</option>
+            <option value="medium">Medium Priority</option>
+            <option value="high">High Priority</option>
+          </select>
+          <button id="addTaskBtn">Add Task</button>
+        </div>
+      </div>
+
+      <!-- Task List Section -->
+      <div class="task-list-section">
+        <h2>Tasks</h2>
+        <ul id="taskList"></ul>
+      </div>
+    </div>
+
+    <!-- Right Column: Schedule Section -->
+    <div class="right-column">
+      <div class="schedule-section">
+        <h2>Days Schedule</h2>
+        <div class="schedule-container">
+          <label>Work Days:</label>
+          <div class="day-options">
+            <label><input type="checkbox" value="Mon" /> Mon</label>
+            <label><input type="checkbox" value="Tue" /> Tue</label>
+            <label><input type="checkbox" value="Wed" /> Wed</label>
+            <label><input type="checkbox" value="Thu" /> Thu</label>
+            <label><input type="checkbox" value="Fri" /> Fri</label>
+            <label><input type="checkbox" value="Sat" /> Sat</label>
+            <label><input type="checkbox" value="Sun" /> Sun</label>
+          </div>
+
+          <label>Study Days:</label>
+          <div class="day-options">
+            <label><input type="checkbox" value="Mon" /> Mon</label>
+            <label><input type="checkbox" value="Tue" /> Tue</label>
+            <label><input type="checkbox" value="Wed" /> Wed</label>
+            <label><input type="checkbox" value="Thu" /> Thu</label>
+            <label><input type="checkbox" value="Fri" /> Fri</label>
+            <label><input type="checkbox" value="Sat" /> Sat</label>
+            <label><input type="checkbox" value="Sun" /> Sun</label>
+          </div>
+
+          <label>Rest Days:</label>
+          <div class="day-options">
+            <label><input type="checkbox" value="Mon" /> Mon</label>
+            <label><input type="checkbox" value="Tue" /> Tue</label>
+            <label><input type="checkbox" value="Wed" /> Wed</label>
+            <label><input type="checkbox" value="Thu" /> Thu</label>
+            <label><input type="checkbox" value="Fri" /> Fri</label>
+            <label><input type="checkbox" value="Sat" /> Sat</label>
+            <label><input type="checkbox" value="Sun" /> Sun</label>
+          </div>
+
+          <button id="saveScheduleBtn">Save Schedule</button>
+        </div>
+
+        <!-- Timetable Section -->
+        <div class="timetable-section">
+          <h2>Timetable</h2>
+          <table id="timetable">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Work</th>
+                <th>Study</th>
+                <th>Rest</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mon</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Tue</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Wed</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Thu</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Fri</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Sat</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Sun</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
