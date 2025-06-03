@@ -1,145 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List App</title>
-  <link rel="stylesheet" href="style.css">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="flutter_application_1">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="profile.jpg"/>
+
+  <title>flutter_application_1</title>
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <script src="flutter_bootstrap.js" async></script>
   <!-- Header Section -->
-  <header class="app-header">
-    <h1>Hello Taleb</h1>
+  <header class="header">
+    <div class="container">
+      <h1> Taleb Chrif </h1>
+      <p> Software Engineering </p>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about"> About me </a></li>
+          <li><a href="#education"> My Education </a></li>
+          <li><a href="#projects"> My projects </a></li>
+          <li><a href="#services"> My Services </a></li> 
+          <li><a href="#contact"> Contact me </a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Main Content -->
-  <div class="app-container">
-    <!-- Left Column: Task Sections -->
-    <div class="left-column">
-      <!-- Add Task Section -->
-      <div class="add-task-section">
-        <h2>Add Task</h2>
-        <div class="input-container">
-          <input type="text" id="taskInput" placeholder="Enter a new task..." />
-          <input type="date" id="endDateInput" />
-          <select id="priorityInput">
-            <option value="low">Low Priority</option>
-            <option value="medium">Medium Priority</option>
-            <option value="high">High Priority</option>
-          </select>
-          <button id="addTaskBtn">Add Task</button>
-        </div>
-      </div>
+  <!-- About Section -->
 
-      <!-- Task List Section -->
-      <div class="task-list-section">
-        <h2>Tasks</h2>
-        <ul id="taskList"></ul>
-      </div>
-    </div>
-
-    <!-- Right Column: Schedule Section -->
-    <div class="right-column">
-      <div class="schedule-section">
-        <h2>Days Schedule</h2>
-        <div class="schedule-container">
-          <label>Work Days:</label>
-          <div class="day-options">
-            <label><input type="checkbox" value="Mon" /> Mon</label>
-            <label><input type="checkbox" value="Tue" /> Tue</label>
-            <label><input type="checkbox" value="Wed" /> Wed</label>
-            <label><input type="checkbox" value="Thu" /> Thu</label>
-            <label><input type="checkbox" value="Fri" /> Fri</label>
-            <label><input type="checkbox" value="Sat" /> Sat</label>
-            <label><input type="checkbox" value="Sun" /> Sun</label>
-          </div>
-
-          <label>Study Days:</label>
-          <div class="day-options">
-            <label><input type="checkbox" value="Mon" /> Mon</label>
-            <label><input type="checkbox" value="Tue" /> Tue</label>
-            <label><input type="checkbox" value="Wed" /> Wed</label>
-            <label><input type="checkbox" value="Thu" /> Thu</label>
-            <label><input type="checkbox" value="Fri" /> Fri</label>
-            <label><input type="checkbox" value="Sat" /> Sat</label>
-            <label><input type="checkbox" value="Sun" /> Sun</label>
-          </div>
-
-          <label>Rest Days:</label>
-          <div class="day-options">
-            <label><input type="checkbox" value="Mon" /> Mon</label>
-            <label><input type="checkbox" value="Tue" /> Tue</label>
-            <label><input type="checkbox" value="Wed" /> Wed</label>
-            <label><input type="checkbox" value="Thu" /> Thu</label>
-            <label><input type="checkbox" value="Fri" /> Fri</label>
-            <label><input type="checkbox" value="Sat" /> Sat</label>
-            <label><input type="checkbox" value="Sun" /> Sun</label>
-          </div>
-
-          <button id="saveScheduleBtn">Save Schedule</button>
-        </div>
-
-        <!-- Timetable Section -->
-        <div class="timetable-section">
-          <h2>Timetable</h2>
-          <table id="timetable">
-            <thead>
-              <tr>
-                <th>Day</th>
-                <th>Work</th>
-                <th>Study</th>
-                <th>Rest</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Mon</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Tue</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Wed</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Thu</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Fri</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Sat</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Sun</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About me</h2>
+      <div class="about-content">
+        <img src="assets/profile.jpg" alt="صورة شخصية" class="profile-img">
+        <div class="about-text">
+          <p>مرحبًا! أنا <strong>الطالب اشريف السملالي</strong>، مهندس برمجيات شغوف ومختص في بناء أنظمة قابلة للتطوير وكفؤة. رحلتي المهنية تميزت بالتفاني في حل المشكلات المعقدة وتقديم حلول تقنية مبتكرة.</p>
+          <p>أمتلك خبرة واسعة في تطوير الواجهة الخلفية، الحوسبة السحابية، وأتمتة عمليات النشر باستخدام أدوات DevOps. كما أتمتع بمعرفة عميقة بلغات البرمجة مثل Java وPython، مما يتيح لي تصميم حلول ذكية وفعالة.</p>
         </div>
       </div>
     </div>
-  </div>
-  <script src="script.js"></script>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education">
+    <div class="container">
+      <h2>الإنجازات الأكاديمية</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>بكالوريوس في الشبكة والاتصالات </h3>
+          <p> جامعة انواكشوط العصرية معهد IUP عام 2022 </p>
+          <p> باكلوريا 2019 </p>
+          <p> شهادة  Brevet 2016 </p>
+        </div>
+        <div class="timeline-item">
+          <h3>الشهادات</h3>
+          <ul>
+            <li>  شهادة   AWS Solutions Architect - Associate </li>
+            <li> شهادة Google Cloud Professional Developer </li>
+            <li> شهادة Scrum Master </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>My projects</h2>
+      <div class="project-grid">
+        <div class="project-item">
+          <img src="assets/profile4.jpg" alt="مشروع 1">
+          <h3>منصة التجارة الإلكترونية المستندة إلى السحابة</h3>
+          <p>طورت منصة تجارة إلكترونية قابلة للتطوير باستخدام خدمات AWS وهندسة الميكروخدمات.</p>
+        </div>
+        <div class="project-item " >
+          <img src="assets/profile2.png" alt="مشروع 2">
+          <h3>خط أنابيب  CI/CD تلقائي </h3>
+          <p> نفذت خط أنابيب CI/CD باستخدام Jenkins لأتمتة عمليات الاختبار والنشر </p>
+        </div>
+        <div class="project-item">
+          <img src="assets/profile3.jpeg" alt="مشروع 3">
+          <h3> لوحة تحليل البيانات </h3>
+          <p >أنشأت لوحة تحليل بيانات في الوقت الفعلي باستخدام Python وFlask وPostgreSQL </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>My Services</h2>
+      <div class="services-content">
+        <div class="service-item">
+          <h3>PowerPoint Presentations</h3>
+          <p>Creating engaging and professional PowerPoint presentations tailored to your needs</p>
+          <video width="280" height="240" controls>
+            <source src="video.MOV" type="video/mp4">
+            <source src="video.MOV" type="video/ogg">
+            Your browser does not support the video tag
+            </video>
+        </div>
+        <div class="service-item">
+          <h3>Word Reports</h3>
+          <p>Crafting detailed and well-structured reports using Microsoft Word</p>
+        </div>
+        <div class="service-item">
+          <h3>Project Management</h3>
+          
+          <p>Utilizing Microsoft Project for efficient project planning and management</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact me</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:talebchrif200@gmail.com">talebchrif200@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/talebchrif" target="_blank">linkedin.com/in/talebchrif</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/talebchrif" target="_blank">github.com/talebchrif</a></p>
+      </div>
+      <form class="contact-form">
+        <input type="text" placeholder="اسمك" required>
+        <input type="email" placeholder="بريدك الإلكتروني" required>
+        <textarea placeholder="رسالتك" required></textarea>
+        <button type="submit">إرسال الرسالة</button>
+      </form>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 الطالب اشريف السملالي. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
 </body>
 </html>
